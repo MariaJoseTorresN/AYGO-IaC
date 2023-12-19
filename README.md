@@ -1,18 +1,26 @@
-# Welcome to your CDK Java project!
+# APLICACIÓN WEB IMPLEMENTADA AUTOMÁTICAMENTE EN AWS
 
-This is a blank project for CDK development with Java.
+## Descripción
+Para este trabajo se aprovecha el primer laboratorio para diseñar un script que aprovisione tres instancias ec2 con los recursos y comandos necesarios, con el fin de automatizar la creación de un servidor web simple. Para lograr esto, se usa cdk como herramienta de creación de infraestructura como código.
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
+## Requisitos
+* Maven - Administrador de dependencias
+* Git - Sistema de control de versiones
+* Java - Lenguaje orientado a objetos
+* Amazon cdk - Amazon cloud development kit
 
-It is a [Maven](https://maven.apache.org/) based project, so you can open this project with any Maven compatible Java IDE to build and run tests.
+## Comandos
 
-## Useful commands
+ * `mvn clean install`    limpia e instala dependencias
+ * `cdk synth`            genera la plantilla de CloudFormation
+ * `cdk deploy`           despliega el stack en la cuenta por defecto
 
- * `mvn package`     compile and run tests
- * `cdk ls`          list all stacks in the app
- * `cdk synth`       emits the synthesized CloudFormation template
- * `cdk deploy`      deploy this stack to your default AWS account/region
- * `cdk diff`        compare deployed stack with current state
- * `cdk docs`        open CDK documentation
+## Instrucciones
 
-Enjoy!
+1. Clonar repositorio y configurar credenciales propias.
+2. Ejecutar comando `mvn clean install`
+3. Ejecutar comando `cdk synth` para generar la plantilla o `cdk deploy` para desplegar el stack en tu cuenta de aws.
+4. Esperar que el stack se despliegue, consultando en Cloudformation.
+5. Acceder al endpoint /hello de cada maquina creada para verificar el funcionamiento.
+
+    **Nota:** Al terminar, no olvides borrar el stack de cloudformation.

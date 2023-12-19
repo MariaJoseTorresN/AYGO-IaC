@@ -68,7 +68,7 @@ public class IaCStack extends Stack {
                                     .build())
                     .role(labRole)
                     .machineImage(MachineImage.latestAmazonLinux2())
-                    .keyName(id)
+                    .keyName("IaCKey")
                     .userData(userData)
                     .build();
         }
